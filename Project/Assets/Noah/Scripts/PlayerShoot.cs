@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
-
-	[SerializeField]
-	private int _playerHealth = 100;
+public class PlayerShoot : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
