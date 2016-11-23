@@ -2,14 +2,17 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
+    public string name {
+        get
+        {
+            return _name;
+        }
+    }
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    [SerializeField]
+    private string _name;
+
+    void Start () {
 	
 	}
 }
