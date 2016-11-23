@@ -11,19 +11,12 @@ public class PlayerShoot : MonoBehaviour {
 
 
 
-	void Start () {
-		//bullet = gameObject.GetComponent<Rigidbody2D> ();
-
-	}
-	
 	// Update is called once per frame
 	void FixedUpdate(){
 		if (Input.GetKeyDown (KeyCode.L)) {
-			GameObject bullInstance = Instantiate (bullet, bulletSpwn.position, bulletSpwn.rotation) as GameObject;
+			GameObject bullInstance = Instantiate(bullet, bulletSpwn.position, bulletSpwn.rotation) as GameObject;
+			bullInstance.transform.right = Vector3.down;
 		}
-
-
-
 
 	}
 }

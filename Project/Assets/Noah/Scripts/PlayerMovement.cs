@@ -7,8 +7,6 @@ public class PlayerMovement : MonoBehaviour {
 	private float _playerMovSpeed = 10.0f;
 	[SerializeField]
 	private float _playerJumpForce = 5.0f;
-	[SerializeField]
-	//private bool _isCrouching = false;
 	Rigidbody2D rb;
 	private RaycastHit _hit;
 	[SerializeField]
