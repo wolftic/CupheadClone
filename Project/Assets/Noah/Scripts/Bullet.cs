@@ -2,21 +2,24 @@
 using System.Collections;
 
 public class Bullet : MonoBehaviour {
-	
+    public float damage = 1f;
 
-
-	void Start(){
+    void Start(){
 		Destroy (gameObject, 3f);
 	}
 
-	public void FixedUpdate(){
-		transform.Translate (transform.right * 1.0f);
+	void Update(){
+		transform.Translate (Vector3.up * 1.0f * Time.deltaTime);
 	}
 
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.transform.tag == "Player")
+        {
+            Health health = coll.transform.GetComponent<Health>();
+            health.RemoveHealth(damage);
+        }
 
-
-
-
-
-
+        Destroy(gameObject);
+    }
 }
