@@ -13,15 +13,18 @@ public class PlayerMovement : MonoBehaviour {
 	private LayerMask groundLayer;
 	[SerializeField]
 	private float _dist;
+	Animator anim;
 
 
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D>();
+		anim = GetComponent<Animator> ();
 	}
 	void FixedUpdate () {
 		  
 		rb.velocity = Input.GetAxis ("Horizontal") * Vector3.right * _playerMovSpeed + rb.velocity.y * Vector3.up; // Player Movement over de horizontale as.
+		anim.SetFloat("movement", Mathf.Abs(Input.GetAxis("Horizontal")));
 		if(Input.GetKeyDown(KeyCode.Space)){ 
 			Jump();
 		}
