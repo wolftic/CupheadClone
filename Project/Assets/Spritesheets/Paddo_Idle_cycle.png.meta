@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: 84918e207da71624ea4ce005116f74f5
+timeCreated: 1480497673
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Paddo_Idle_cycle_0
+    21300002: Paddo_Idle_cycle_1
+    21300004: Paddo_Idle_cycle_2
+    21300006: Paddo_Idle_cycle_3
+    21300008: Paddo_Idle_cycle_4
+    21300010: Paddo_Idle_cycle_5
+    21300012: Paddo_Idle_cycle_6
+    21300014: Paddo_Idle_cycle_7
+    21300016: Paddo_Idle_cycle_8
+    21300018: Paddo_Idle_cycle_9
+    21300020: Paddo_Idle_cycle_10
+    21300022: Paddo_Idle_cycle_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 103
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 2
+        width: 103
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 3
+        width: 109
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_3
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2
+        width: 109
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_4
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 2
+        width: 109
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_5
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 2
+        width: 112
+        height: 101
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_6
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 2
+        width: 115
+        height: 98
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_7
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 2
+        width: 109
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_8
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 2
+        width: 109
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_9
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 2
+        width: 109
+        height: 106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_10
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 2
+        width: 102
+        height: 109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Paddo_Idle_cycle_11
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 2
+        width: 103
+        height: 116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
