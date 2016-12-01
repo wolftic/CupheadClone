@@ -21,6 +21,9 @@ public class Bullet : MonoBehaviour {
         {
             Health health = coll.transform.GetComponent<Health>();
             health.RemoveHealth(damage);
+        } else
+        {
+            Physics2D.IgnoreCollision(coll.collider, transform.GetComponent<Collider2D>(), true);
         }
 
         Destroy(gameObject);
