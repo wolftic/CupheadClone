@@ -6,6 +6,8 @@ public class PlayerShoot : MonoBehaviour {
     private GameObject _bullet;
     [SerializeField]
     private float _bulletSpeed;
+    [SerializeField]
+    private Vector3 _offset;
 
     Animator anim;
 
@@ -30,7 +32,7 @@ public class PlayerShoot : MonoBehaviour {
 
     void Shoot(Vector3 dir)
     {
-        GameObject bullInstance = Instantiate(_bullet, transform.position + dir, Quaternion.identity) as GameObject;
+        GameObject bullInstance = Instantiate(_bullet, transform.position + dir + _offset, Quaternion.identity) as GameObject;
         bullInstance.transform.up = dir.normalized;
         bullInstance.GetComponent<Bullet>().speed = _bulletSpeed;
         anim.SetTrigger("Shoot");
