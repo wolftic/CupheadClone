@@ -44,11 +44,10 @@ public class PlayerMovement : MonoBehaviour {
         Vector2 step = new Vector2(1f / _raysToShoot, 0f);
         bool collided = false;
         
-        for (int i = 0; i < _raysToShoot; i++)
+        for (int i = 0; i < Mathf.RoundToInt(_raysToShoot); i++)
         {
-            RaycastHit2D hit = Physics2D.Raycast(position + (-_raysToShoot / 2 - i) * step, direction, _dist, groundLayer); //Nieuw Raycast hit die de positie,richting,afstand en de layer pakt 
-            //RaycastHit2D hit = Physics2D.Linecast(position + (-5 - i) * step, position + direction * _dist + (-5 + i) * step, groundLayer);
-            Debug.Log(position + (-5 + 10) * step);
+            //RaycastHit2D hit = Physics2D.Raycast(position + (-_raysToShoot / 2 - i) * step, direction, _dist, groundLayer); //Nieuw Raycast hit die de positie,richting,afstand en de layer pakt 
+            RaycastHit2D hit = Physics2D.Linecast(position + (-5 - i) * step, position + direction * _dist + (-5 + i) * step, groundLayer);
             if (hit.collider != null)
             { //Als de collider de grond raakt = het true. Dus het tegenovergestelde van null
                 collided = true;
@@ -62,7 +61,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (!IsGrounded()) {
 			return;
 		} else {
-			rb.AddForce (Vector3.up * _playerJumpForce); // Player springt in verticale richting
+			rb.AddForce (Vector3.up * _playerJumpForce, ForceMode2D.Impulse); // Player springt in verticale richting
             _jumpCooldownTime = Time.time + _jumpCooldown; 
 
         }
