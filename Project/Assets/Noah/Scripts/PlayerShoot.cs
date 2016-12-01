@@ -33,6 +33,7 @@ public class PlayerShoot : MonoBehaviour {
         GameObject bullInstance = Instantiate(_bullet, transform.position + dir, Quaternion.identity) as GameObject;
         bullInstance.transform.up = dir.normalized;
         bullInstance.GetComponent<Bullet>().speed = _bulletSpeed;
+        anim.SetTrigger("Shoot");
     }
 }
 
