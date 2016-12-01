@@ -19,13 +19,13 @@ public class PlayerShoot : MonoBehaviour {
         float xAxis = Input.GetAxisRaw("HorizontalShoot");
         float yAxis = Input.GetAxisRaw("VerticalShoot");
 
-        if (Input.GetButtonDown("Fire1") && (xAxis != 0 || yAxis != 0))
+        if ((xAxis != 0 || yAxis != 0))
         {
             Shoot(new Vector2(xAxis, Mathf.Abs(yAxis)));
         }
 
-        anim.SetFloat("ShootDirX", xAxis);
-        anim.SetFloat("ShootDirY", yAxis);
+        anim.SetFloat("ShootDirX", Mathf.Abs(xAxis));
+        anim.SetFloat("ShootDirY", Mathf.Abs(yAxis));
     }
 
     void Shoot(Vector3 dir)
@@ -34,6 +34,7 @@ public class PlayerShoot : MonoBehaviour {
         bullInstance.transform.up = dir.normalized;
         bullInstance.GetComponent<Bullet>().speed = _bulletSpeed;
         anim.SetTrigger("Shoot");
+        transform.localScale = new Vector3(Input.GetAxisRaw("HorizontalShoot"), 1, 1);
     }
 }
 

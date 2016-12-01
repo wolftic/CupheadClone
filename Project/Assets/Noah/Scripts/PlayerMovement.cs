@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 		rb = gameObject.GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator> ();
 	}
-	void FixedUpdate () {
+	void Update () {
 		  
 		rb.velocity = Input.GetAxis ("Horizontal") * Vector3.right * _playerMovSpeed + rb.velocity.y * Vector3.up; // Player Movement over de horizontale as.
 		//anim.SetFloat("movement", Mathf.Abs(Input.GetAxis("Horizontal")));
@@ -37,6 +37,11 @@ public class PlayerMovement : MonoBehaviour {
             {
                 Jump();
             }
+        }
+
+        if (Input.GetAxisRaw ("Horizontal") != 0)
+        {
+            transform.localScale = new Vector3(Input.GetAxisRaw("Horizontal"), 1, 1);
         }
 
         anim.SetBool("inAir", !IsGrounded());
