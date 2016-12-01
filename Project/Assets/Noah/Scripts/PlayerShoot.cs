@@ -7,6 +7,13 @@ public class PlayerShoot : MonoBehaviour {
     [SerializeField]
     private float _bulletSpeed;
 
+    Animator anim;
+
+    void Start ()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     void Update()
     {
         float xAxis = Input.GetAxisRaw("HorizontalShoot");
@@ -16,6 +23,9 @@ public class PlayerShoot : MonoBehaviour {
         {
             Shoot(new Vector2(xAxis, Mathf.Abs(yAxis)));
         }
+
+        anim.SetFloat("ShootDirX", xAxis);
+        anim.SetFloat("ShootDirY", yAxis);
     }
 
     void Shoot(Vector3 dir)

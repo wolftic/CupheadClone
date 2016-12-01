@@ -18,7 +18,8 @@ public class PlayerMovement : MonoBehaviour {
 	private LayerMask groundLayer;
 	[SerializeField]
 	private float _dist;
-	Animator anim;
+
+    Animator anim;
 
 
 	// Use this for initialization
@@ -37,6 +38,9 @@ public class PlayerMovement : MonoBehaviour {
                 Jump();
             }
         }
+
+        anim.SetBool("inAir", !IsGrounded());
+        anim.SetFloat("Speed", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
 	}
 	bool IsGrounded(){
 		Vector2 position = transform.position; // Vector2 positie van de speler
@@ -63,7 +67,6 @@ public class PlayerMovement : MonoBehaviour {
 		} else {
 			rb.AddForce (Vector3.up * _playerJumpForce, ForceMode2D.Impulse); // Player springt in verticale richting
             _jumpCooldownTime = Time.time + _jumpCooldown; 
-
         }
 	}
 
