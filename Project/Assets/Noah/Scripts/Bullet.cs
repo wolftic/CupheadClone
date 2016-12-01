@@ -15,15 +15,12 @@ public class Bullet : MonoBehaviour {
 		transform.Translate (Vector3.up * speed * Time.deltaTime);
 	}
 
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collision2D coll)
     {
         if (coll.transform.tag == targetTag)
         {
             Health health = coll.transform.GetComponent<Health>();
             health.RemoveHealth(damage);
-        } else
-        {
-            Physics2D.IgnoreCollision(coll.collider, transform.GetComponent<Collider2D>(), true);
         }
 
         Destroy(gameObject);
