@@ -36,7 +36,10 @@ public class PlayerShoot : MonoBehaviour {
         bullInstance.transform.up = dir.normalized;
         bullInstance.GetComponent<Bullet>().speed = _bulletSpeed;
         anim.SetTrigger("Shoot");
-        transform.localScale = new Vector3(Input.GetAxisRaw("HorizontalShoot"), 1, 1);
+        if (Input.GetAxisRaw("HorizontalShoot") != 0)
+        {
+            transform.localScale = new Vector3(Input.GetAxisRaw("HorizontalShoot"), 1, 1);
+        }
     }
 }
 
