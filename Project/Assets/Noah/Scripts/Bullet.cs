@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour {
 		transform.Translate (Vector3.up * speed * Time.deltaTime);
 	}
 
-    void OnTriggerEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.transform.tag == targetTag)
         {
