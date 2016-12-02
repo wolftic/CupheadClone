@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 20d2356b6cd70c944be357901a890d46
-timeCreated: 1480431501
+timeCreated: 1480681934
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -122,7 +122,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 399
-        y: 14
+        y: 13
         width: 107
         height: 109
       alignment: 7
@@ -147,12 +147,12 @@ TextureImporter:
       name: Paddo_Attack_cycle_5
       rect:
         serializedVersion: 2
-        x: 625
-        y: 4
+        x: 627
+        y: 3
         width: 104
         height: 129
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.44123194, y: 0.010528442}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -164,8 +164,8 @@ TextureImporter:
         y: 6
         width: 104
         height: 125
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.43470293, y: -0.0054327166}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -177,8 +177,8 @@ TextureImporter:
         y: 7
         width: 103
         height: 123
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4076965, y: -0.0055210222}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -187,11 +187,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 958
-        y: 12
+        y: 11
         width: 94
         height: 113
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.33383957, y: 0.018028917}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -200,11 +200,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1060
-        y: 12
+        y: 11
         width: 94
         height: 113
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.2977178, y: 0.03004821}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -216,8 +216,8 @@ TextureImporter:
         y: 12
         width: 94
         height: 113
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.31939048, y: 0.000000016879191}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -229,8 +229,8 @@ TextureImporter:
         y: 8
         width: 102
         height: 121
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.77962476, y: 0.000000063052845}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -242,8 +242,8 @@ TextureImporter:
         y: 6
         width: 133
         height: 125
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.83188623, y: -0.010865433}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -251,12 +251,12 @@ TextureImporter:
       name: Paddo_Attack_cycle_13
       rect:
         serializedVersion: 2
-        x: 1515
+        x: 1516
         y: 2
         width: 149
         height: 134
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.8463815, y: -0.005067789}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -268,8 +268,8 @@ TextureImporter:
         y: 3
         width: 144
         height: 131
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.84897697, y: 0.010367703}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -281,8 +281,8 @@ TextureImporter:
         y: 4
         width: 142
         height: 130
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.8538913, y: -0.000000055019672}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -294,8 +294,8 @@ TextureImporter:
         y: 3
         width: 144
         height: 131
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.83954537, y: 0.010367703}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -307,8 +307,8 @@ TextureImporter:
         y: 3
         width: 148
         height: 131
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.8900179, y: 0.0051838094}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -317,11 +317,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2282
-        y: 4
+        y: 3
         width: 147
         height: 131
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.86033326, y: 0.0051838094}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -333,8 +333,8 @@ TextureImporter:
         y: 4
         width: 147
         height: 131
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.87419283, y: -0.005183946}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -346,8 +346,8 @@ TextureImporter:
         y: 4
         width: 147
         height: 131
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.85571456, y: -0.000000054599674}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -359,8 +359,8 @@ TextureImporter:
         y: 8
         width: 115
         height: 121
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.7716351, y: -0.005612247}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -368,12 +368,12 @@ TextureImporter:
       name: Paddo_Attack_cycle_22
       rect:
         serializedVersion: 2
-        x: 2872
-        y: 11
+        x: 2877
+        y: 8
         width: 105
         height: 115
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.6875581, y: -0.011810191}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -381,12 +381,12 @@ TextureImporter:
       name: Paddo_Attack_cycle_23
       rect:
         serializedVersion: 2
-        x: 2983
-        y: 11
+        x: 2987
+        y: 10
         width: 106
         height: 117
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.596097, y: 0.0058041434}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -394,12 +394,12 @@ TextureImporter:
       name: Paddo_Attack_cycle_24
       rect:
         serializedVersion: 2
-        x: 3096
+        x: 3104
         y: 8
         width: 110
         height: 120
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.40739524, y: 0.00000006357829}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -411,8 +411,8 @@ TextureImporter:
         y: 9
         width: 107
         height: 119
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.46826628, y: -0.005706715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
