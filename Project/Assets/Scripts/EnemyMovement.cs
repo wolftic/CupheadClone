@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour {
     [SerializeField]
     private GameObject[] _waypoints;
     private int _currentWaypoint = 0;
+    [SerializeField]
+    private bool _rotateTowardsWaypoint = false;
 
     private float _percentage = 0;
     private float _distanceToWaypoint;
@@ -33,7 +35,12 @@ public class EnemyMovement : MonoBehaviour {
         _percentage = (_distanceMoved / _distanceToWaypoint);
 
         transform.position = Vector3.Lerp(_currentWaypointGameobject.transform.position, _nextWaypointGameobject.transform.position, Mathf.SmoothStep(0, 1, _percentage));
-    }
+        
+        if(_rotateTowardsWaypoint)
+        {
+            transform.localScale = new Vector3(((_currentWaypointGameobject.transform.position.x - _nextWaypointGameobject.transform.position.x) < 0) ? -1 : 1, 1, 1);
+        }
+   }
 
     void NextWaypoint()
     {
