@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e56f9c3d5c3ac1b4f9bdcf071a63cd27
-timeCreated: 1480428268
+timeCreated: 1480591128
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -67,8 +67,8 @@ TextureImporter:
         y: 4
         width: 161
         height: 201
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.39, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -80,8 +80,8 @@ TextureImporter:
         y: 5
         width: 153
         height: 198
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.42, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -89,12 +89,12 @@ TextureImporter:
       name: Cuphead_Shoot_to_side_cycle_2
       rect:
         serializedVersion: 2
-        x: 333
-        y: 5
-        width: 126
-        height: 197
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        x: 331
+        y: 4
+        width: 128
+        height: 198
+      alignment: 9
+      pivot: {x: 0.54, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -106,8 +106,8 @@ TextureImporter:
         y: 4
         width: 135
         height: 200
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.47, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -119,8 +119,8 @@ TextureImporter:
         y: 4
         width: 143
         height: 201
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -132,8 +132,8 @@ TextureImporter:
         y: 4
         width: 161
         height: 201
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -145,8 +145,8 @@ TextureImporter:
         y: 4
         width: 161
         height: 201
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.39, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
