@@ -31,13 +31,24 @@ public class EnemyAttacking : MonoBehaviour
     [SerializeField]
     private int _maxAngleRange;
     [SerializeField]
-    private float _shootSpeed;
+    private float _shootSpeed, _bullets, _bulletSpeed, _shootDelay;
     [SerializeField]
     private Transform _bulletPrefab;
     [SerializeField]
     private Transform _muzzle;
+    [SerializeField]
+    private bool _affectedByDistance = false;
+    [SerializeField]
+    private float _affectionDistance = 5f;
 
     private float _cooldownTime;
+
+    Animator anim;
+
+    void Start ()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -52,21 +63,45 @@ public class EnemyAttacking : MonoBehaviour
                     {
                         Debug.DrawRay(_muzzle.position, Quaternion.Euler(0, 0, i - _attackAngle - _maxAngleRange / 2) * Vector3.up * _attackRange, Color.red, 1.0f);
 
-                        Shoot(Quaternion.Euler(0, 0, i - _attackAngle - _maxAngleRange / 2) * Vector3.up);
+                        direction = Quaternion.Euler(0, 0, i - _attackAngle - _maxAngleRange / 2) * Vector3.up;
+
+                        Invoke("Shoot", _shootDelay);
+                        anim.SetTrigger("Attack");
+
                         _cooldownTime = Time.time + _shootSpeed;
                         break;
+                    }
+                }
+
+                if (_affectedByDistance)
+                {
+                    if (Vector3.Distance (GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= _affectionDistance)
+                    {
+                        Invoke("Shoot", _shootDelay);
+                        anim.SetTrigger("Attack");
+
+                        direction = Quaternion.Euler(0, 0, Random.Range(0, _maxAngleRange) - _attackAngle - _maxAngleRange / 2) * Vector3.up;
+
+                        _cooldownTime = Time.time + _shootSpeed;
                     }
                 }
             }
         }
     }
 
-    void Shoot(Vector3 direction)
+    Vector3 direction;
+
+    void Shoot()
     {
-        Transform bullet = Instantiate(_bulletPrefab) as Transform;
-        bullet.position = _muzzle.position;
-        bullet.up = direction.normalized; //Verander richting van kogel
-        bullet.GetComponent<Bullet>().damage = _damage;
+        if (_bullets > 0)
+        {
+            Transform bullet = Instantiate(_bulletPrefab) as Transform;
+            bullet.position = _muzzle.position;
+            bullet.up = direction.normalized; //Verander richting van kogel
+            bullet.GetComponent<Bullet>().damage = _damage;
+            bullet.GetComponent<Bullet>().speed = _bulletSpeed;
+            _bullets--;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -80,6 +115,7 @@ public class EnemyAttacking : MonoBehaviour
                 Health health = coll.transform.GetComponent<Health>();
                 health.RemoveHealth(_damage);
                 _cooldownTime = Time.time + _attackSpeed;
+                Debug.Log("Attacked");
             }
         }
     }

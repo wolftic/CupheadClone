@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: e56f9c3d5c3ac1b4f9bdcf071a63cd27
-timeCreated: 1480591128
+guid: 89436259581f350409683f8e3f2700e5
+timeCreated: 1481031484
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Cuphead_Shoot_to_side_cycle_0
-    21300002: Cuphead_Shoot_to_side_cycle_1
-    21300004: Cuphead_Shoot_to_side_cycle_2
-    21300006: Cuphead_Shoot_to_side_cycle_3
-    21300008: Cuphead_Shoot_to_side_cycle_4
-    21300010: Cuphead_Shoot_to_side_cycle_5
-    21300012: Cuphead_Shoot_to_side_cycle_6
+    21300000: tulip_attack_0
+    21300002: tulip_attack_1
+    21300004: tulip_attack_2
+    21300006: tulip_attack_3
+    21300008: tulip_attack_4
+    21300010: tulip_attack_5
+    21300012: tulip_attack_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -60,93 +60,93 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cuphead_Shoot_to_side_cycle_0
+      name: tulip_attack_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 4
-        width: 161
-        height: 201
-      alignment: 9
-      pivot: {x: 0.39, y: 0}
+        x: 11
+        y: 3
+        width: 79
+        height: 149
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cuphead_Shoot_to_side_cycle_1
+      name: tulip_attack_1
       rect:
         serializedVersion: 2
-        x: 172
-        y: 5
-        width: 153
-        height: 198
-      alignment: 9
-      pivot: {x: 0.42, y: 0}
+        x: 97
+        y: 3
+        width: 81
+        height: 130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cuphead_Shoot_to_side_cycle_2
+      name: tulip_attack_2
       rect:
         serializedVersion: 2
-        x: 331
-        y: 4
-        width: 128
-        height: 198
-      alignment: 9
-      pivot: {x: 0.54, y: 0}
+        x: 185
+        y: 3
+        width: 79
+        height: 108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cuphead_Shoot_to_side_cycle_3
+      name: tulip_attack_3
       rect:
         serializedVersion: 2
-        x: 467
-        y: 4
-        width: 135
-        height: 200
-      alignment: 9
-      pivot: {x: 0.47, y: 0}
+        x: 271
+        y: 2
+        width: 89
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cuphead_Shoot_to_side_cycle_4
+      name: tulip_attack_4
       rect:
         serializedVersion: 2
-        x: 610
-        y: 4
-        width: 143
-        height: 201
-      alignment: 9
-      pivot: {x: 0.45, y: 0}
+        x: 367
+        y: 3
+        width: 89
+        height: 163
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cuphead_Shoot_to_side_cycle_5
+      name: tulip_attack_5
       rect:
         serializedVersion: 2
-        x: 761
-        y: 4
-        width: 161
-        height: 201
-      alignment: 9
-      pivot: {x: 0.37, y: 0}
+        x: 463
+        y: 3
+        width: 86
+        height: 163
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Cuphead_Shoot_to_side_cycle_6
+      name: tulip_attack_6
       rect:
         serializedVersion: 2
-        x: 930
-        y: 4
-        width: 161
-        height: 201
-      alignment: 9
-      pivot: {x: 0.39, y: 0}
+        x: 556
+        y: 2
+        width: 83
+        height: 152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

@@ -1,24 +1,19 @@
 fileFormatVersion: 2
-guid: 6038b48daa126fc4fb2ebcabd0fe03cf
-timeCreated: 1480582798
+guid: 8b7cc17806801a840b50ad72abd5de2d
+timeCreated: 1480945307
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Coin_FX_0
-    21300002: Coin_FX_6
-    21300004: Coin_FX_7
-    21300006: Coin_FX_8
-    21300008: Coin_FX_18
-    21300010: Coin_FX_43
-    21300012: Coin_FX_95
-    21300014: Coin_FX_96
-    21300016: Coin_FX_1
-    21300018: Coin_FX_2
-    21300020: Coin_FX_3
-    21300022: Coin_FX_4
-    21300024: Coin_FX_5
-    21300026: Coin_FX_9
-    21300028: Coin_FX_10
+    21300000: runcloud_spritesheet_0
+    21300002: runcloud_spritesheet_1
+    21300004: runcloud_spritesheet_2
+    21300006: runcloud_spritesheet_3
+    21300008: runcloud_spritesheet_4
+    21300010: runcloud_spritesheet_5
+    21300012: runcloud_spritesheet_6
+    21300014: runcloud_spritesheet_7
+    21300016: runcloud_spritesheet_8
+    21300018: runcloud_spritesheet_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -41,8 +36,8 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
-  maxTextureSize: 4096
+  textureFormat: -1
+  maxTextureSize: 2048
   textureSettings:
     filterMode: -1
     aniso: 16
@@ -68,143 +63,130 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Coin_FX_0
+      name: runcloud_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 82
-        y: 95
-        width: 209
-        height: 201
+        x: 5
+        y: 21
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Coin_FX_1
+      name: runcloud_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 326
-        y: 93
-        width: 214
-        height: 211
+        x: 30
+        y: 20
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Coin_FX_2
+      name: runcloud_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 605
-        y: 80
-        width: 265
-        height: 239
+        x: 54
+        y: 20
+        width: 19
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Coin_FX_3
+      name: runcloud_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 922
-        y: 63
-        width: 304
-        height: 273
+        x: 77
+        y: 15
+        width: 29
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Coin_FX_4
+      name: runcloud_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 53
-        width: 326
-        height: 281
+        x: 111
+        y: 13
+        width: 32
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Coin_FX_5
+      name: runcloud_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 1690
-        y: 59
-        width: 338
-        height: 275
+        x: 147
+        y: 10
+        width: 38
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Coin_FX_6
+      name: runcloud_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 2091
-        y: 25
-        width: 359
-        height: 337
+        x: 188
+        y: 8
+        width: 41
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Coin_FX_7
+      name: runcloud_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 2515
+        x: 233
         y: 4
-        width: 333
-        height: 386
+        width: 47
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Coin_FX_8
+      name: runcloud_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 2896
-        y: 65
-        width: 245
-        height: 260
+        x: 283
+        y: 1
+        width: 54
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Coin_FX_9
+      name: runcloud_spritesheet_9
       rect:
         serializedVersion: 2
-        x: 3187
-        y: 99
-        width: 219
-        height: 220
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Coin_FX_10
-      rect:
-        serializedVersion: 2
-        x: 3464
-        y: 108
-        width: 122
-        height: 168
+        x: 340
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

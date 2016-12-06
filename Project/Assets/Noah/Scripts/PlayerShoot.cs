@@ -8,6 +8,9 @@ public class PlayerShoot : MonoBehaviour {
     private float _bulletSpeed;
     [SerializeField]
     private Vector3 _offset;
+    [SerializeField]
+    private float _shootSpeed;
+    private float _shootDelay;
 
     Animator anim;
 
@@ -32,13 +35,17 @@ public class PlayerShoot : MonoBehaviour {
 
     void Shoot(Vector3 dir)
     {
-        GameObject bullInstance = Instantiate(_bullet, transform.position + dir + _offset, Quaternion.identity) as GameObject;
-        bullInstance.transform.up = dir.normalized;
-        bullInstance.GetComponent<Bullet>().speed = _bulletSpeed;
-        anim.SetTrigger("Shoot");
-        if (Input.GetAxisRaw("HorizontalShoot") != 0)
+        if (_shootDelay < Time.time)
         {
-            transform.localScale = new Vector3(Input.GetAxisRaw("HorizontalShoot"), 1, 1);
+            GameObject bullInstance = Instantiate(_bullet, transform.position + dir + _offset, Quaternion.identity) as GameObject;
+            bullInstance.transform.up = dir.normalized;
+            bullInstance.GetComponent<Bullet>().speed = _bulletSpeed;
+            anim.SetTrigger("Shoot");
+            if (Input.GetAxisRaw("HorizontalShoot") != 0)
+            {
+                transform.localScale = new Vector3(Input.GetAxisRaw("HorizontalShoot"), 1, 1);
+            }
+            _shootDelay = _shootSpeed + Time.time;
         }
     }
 }

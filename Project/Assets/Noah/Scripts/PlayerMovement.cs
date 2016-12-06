@@ -13,22 +13,24 @@ public class PlayerMovement : MonoBehaviour {
     private float _raysToShoot = 10f;
 
     Rigidbody2D rb;
+    BoxCollider2D col;
 	private RaycastHit _hit;
 	[SerializeField]
 	private LayerMask groundLayer;
 	[SerializeField]
 	private float _dist;
-
+    [SerializeField]
+    private GameObject _runAnimationVFX;
+    private float _interval = 0.5f, _timer = 0f;
     Animator anim;
-
 
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D>();
+        col = gameObject.GetComponent<BoxCollider2D>();
 		anim = GetComponent<Animator> ();
 	}
 	void Update () {
-		  
 		rb.velocity = Input.GetAxis ("Horizontal") * Vector3.right * _playerMovSpeed + rb.velocity.y * Vector3.up; // Player Movement over de horizontale as.
 		//anim.SetFloat("movement", Mathf.Abs(Input.GetAxis("Horizontal")));
         if (_jumpCooldownTime < Time.time)
@@ -42,6 +44,11 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetAxisRaw ("Horizontal") != 0)
         {
             transform.localScale = new Vector3(Input.GetAxisRaw("Horizontal"), 1, 1);
+            if (_timer < Time.time && IsGrounded())
+            {
+                _timer = Time.time + _interval;
+                Instantiate(_runAnimationVFX, transform.position, Quaternion.identity);
+            }
         }
 
         anim.SetBool("inAir", !IsGrounded());
@@ -50,18 +57,19 @@ public class PlayerMovement : MonoBehaviour {
 	bool IsGrounded(){
 		Vector2 position = transform.position; // Vector2 positie van de speler
 		Vector2 direction = Vector2.down; // De richting die de Raycast op gaat
-        Vector2 step = new Vector2(1f / _raysToShoot, 0f);
+        Vector2 step = new Vector2(col.size.x / _raysToShoot, 0f);
         bool collided = false;
-        
-        for (int i = 0; i < Mathf.RoundToInt(_raysToShoot); i++)
+
+        RaycastHit2D hit;
+
+        for (int i = 0; i < Mathf.CeilToInt(_raysToShoot); i++)
         {
-            //RaycastHit2D hit = Physics2D.Raycast(position + (-_raysToShoot / 2 - i) * step, direction, _dist, groundLayer); //Nieuw Raycast hit die de positie,richting,afstand en de layer pakt 
-            RaycastHit2D hit = Physics2D.Linecast(position + (-5 - i) * step, position + direction * _dist + (-5 + i) * step, groundLayer);
+            hit = Physics2D.Linecast(position + (-_raysToShoot / 2 + i + .5f) * step, position + direction * _dist + (-_raysToShoot / 2 + i + .5f) * step, groundLayer);
             if (hit.collider != null)
             { //Als de collider de grond raakt = het true. Dus het tegenovergestelde van null
                 collided = true;
+                Debug.DrawLine(position + (-_raysToShoot / 2 + i + .5f) * step, position + direction * _dist + (-_raysToShoot / 2 + i + .5f) * step, Color.red);
             }
-            Debug.DrawLine(position + (-_raysToShoot / 2 + i) * step, position + direction * _dist + (-_raysToShoot / 2 + i) * step, Color.red, .1f);
         }
 
         return collided;

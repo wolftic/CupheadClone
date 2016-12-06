@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour {
         {
             Health health = coll.transform.GetComponent<Health>();
             health.RemoveHealth(damage);
+            Debug.Log(damage);
         }
 
         Destroy(gameObject);

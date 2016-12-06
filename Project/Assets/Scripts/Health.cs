@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class Health : MonoBehaviour {
+    private Vector3 _spawnPosition;
+   
+
     public float health {
         get
         {
@@ -9,11 +12,15 @@ public class Health : MonoBehaviour {
         }
         set
         {
+            _health = value;
+
             if (_health <= 0)
             {
                 _isAlive = false;
+            } else
+            {
+                _isAlive = true;
             }
-            _health = value;
         }
     }
     public bool isAlive
@@ -34,6 +41,8 @@ public class Health : MonoBehaviour {
 
     void Start()
     {
+        
+        _spawnPosition = transform.position;
         _health = _startHealth;
     }
 
@@ -45,5 +54,20 @@ public class Health : MonoBehaviour {
     public void AddHealth(float heal)
     {
         health += heal;
+    }
+
+    void Update()
+    {
+        
+        if (transform.position.y < -10)
+        {
+            health -= health;
+        }
+
+        if (!_isAlive)
+        {
+            transform.position = _spawnPosition;
+            health = _startHealth;
+        }
     }
 }
