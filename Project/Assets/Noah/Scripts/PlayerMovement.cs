@@ -20,9 +20,10 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField]
 	private float _dist;
     [SerializeField]
-    private GameObject _runAnimationVFX;
+    private GameObject _runAnimationVFX, _fallAnimationVFX;
     private float _interval = 0.5f, _timer = 0f;
     Animator anim;
+    bool _wasGrounded = false;
 
 	// Use this for initialization
 	void Start () {
@@ -54,6 +55,7 @@ public class PlayerMovement : MonoBehaviour {
         anim.SetBool("inAir", !IsGrounded());
         anim.SetFloat("Speed", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
 	}
+
 	bool IsGrounded(){
 		Vector2 position = transform.position; // Vector2 positie van de speler
 		Vector2 direction = Vector2.down; // De richting die de Raycast op gaat
@@ -69,8 +71,17 @@ public class PlayerMovement : MonoBehaviour {
             { //Als de collider de grond raakt = het true. Dus het tegenovergestelde van null
                 collided = true;
                 Debug.DrawLine(position + (-_raysToShoot / 2 + i + .5f) * step, position + direction * _dist + (-_raysToShoot / 2 + i + .5f) * step, Color.red);
+
+                if (!_wasGrounded)
+                {
+                    Instantiate(_fallAnimationVFX, transform.position, Quaternion.identity);
+                }
+
+                _wasGrounded = true;
             }
         }
+
+        _wasGrounded = collided;
 
         return collided;
 	}

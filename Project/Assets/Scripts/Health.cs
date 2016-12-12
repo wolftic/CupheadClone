@@ -3,7 +3,10 @@ using System.Collections;
 
 public class Health : MonoBehaviour {
     private Vector3 _spawnPosition;
-   
+    [SerializeField]
+    private GameObject _hitvfx, _deathvfx;
+    [SerializeField]
+    private bool _canRespawn;
 
     public float health {
         get
@@ -49,6 +52,17 @@ public class Health : MonoBehaviour {
     public void RemoveHealth(float dmg)
     {
         health -= dmg;
+        Instantiate(_hitvfx, transform.position, Quaternion.identity);
+        if (health <= 0)
+        {
+            if(_canRespawn)
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+            } else {
+                gameObject.SetActive(false);
+            }
+            Instantiate(_deathvfx, transform.position, Quaternion.identity);
+        }
     }
 
     public void AddHealth(float heal)
@@ -64,9 +78,10 @@ public class Health : MonoBehaviour {
             health -= health;
         }
 
-        if (!_isAlive)
+        if (!_isAlive && _canRespawn)
         {
             transform.position = _spawnPosition;
+            GetComponent<SpriteRenderer>().enabled = true;
             health = _startHealth;
         }
     }
