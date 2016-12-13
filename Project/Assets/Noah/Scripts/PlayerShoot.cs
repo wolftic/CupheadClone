@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerShoot : MonoBehaviour {
     [SerializeField]
-    private GameObject _bullet;
+    private GameObject _bullet, _bulletShootVFX;
     [SerializeField]
     private float _bulletSpeed;
     [SerializeField]
@@ -44,6 +44,10 @@ public class PlayerShoot : MonoBehaviour {
             if (Input.GetAxisRaw("HorizontalShoot") != 0)
             {
                 transform.localScale = new Vector3(Input.GetAxisRaw("HorizontalShoot"), 1, 1);
+            }
+            if(_bulletShootVFX)
+            {
+                Instantiate(_bulletShootVFX, transform.position + dir + _offset, Quaternion.identity);
             }
             _shootDelay = _shootSpeed + Time.time;
         }
