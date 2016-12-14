@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityStandardAssets.ImageEffects;
 
 public class Health : MonoBehaviour {
     private Vector3 _spawnPosition;
@@ -37,14 +39,13 @@ public class Health : MonoBehaviour {
     [SerializeField]
     private float _health;
     [SerializeField]
-    private bool _isAlive = true;
+    private bool _isAlive = true, useAnimationCamera = false, restartScene = false;
 
     [SerializeField]
     private float _startHealth = 10f;
 
     void Start()
     {
-        
         _spawnPosition = transform.position;
         _health = _startHealth;
     }
@@ -58,6 +59,10 @@ public class Health : MonoBehaviour {
             if(_canRespawn)
             {
                 GetComponent<SpriteRenderer>().enabled = false;
+                if(useAnimationCamera)
+                {
+                    Camera.main.GetComponent<Animator>().SetBool("Open", false);
+                }
             } else {
                 gameObject.SetActive(false);
             }
@@ -73,16 +78,29 @@ public class Health : MonoBehaviour {
     void Update()
     {
         
-        if (transform.position.y < -10)
+        if (transform.position.y < -10 && isAlive)
         {
-            health -= health;
+            RemoveHealth(health);
         }
 
         if (!_isAlive && _canRespawn)
         {
-            transform.position = _spawnPosition;
-            GetComponent<SpriteRenderer>().enabled = true;
+            if(restartScene)
+            {
+                SceneManager.LoadScene(0);
+            }
             health = _startHealth;
+            Invoke("Respawn", 1.5f);
+        }
+    }
+
+    void Respawn()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+        transform.position = _spawnPosition;
+        if (useAnimationCamera)
+        {
+            Camera.main.GetComponent<Animator>().SetBool("Open", true);
         }
     }
 }
