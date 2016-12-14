@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0ff5a2988699db3409238ffefd2367cd
-timeCreated: 1481035496
+guid: a38b8bb7fd43b084b8368b357e16dc59
+timeCreated: 1481278783
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -62,10 +62,10 @@ TextureImporter:
       name: bullit_hit_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 8
-        width: 400
-        height: 315
+        x: 12
+        y: 9
+        width: 394
+        height: 310
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -75,10 +75,10 @@ TextureImporter:
       name: bullit_hit_1
       rect:
         serializedVersion: 2
-        x: 419
-        y: 9
-        width: 400
-        height: 313
+        x: 423
+        y: 11
+        width: 391
+        height: 307
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -88,10 +88,10 @@ TextureImporter:
       name: bullit_hit_2
       rect:
         serializedVersion: 2
-        x: 830
-        y: 8
-        width: 398
-        height: 313
+        x: 835
+        y: 12
+        width: 392
+        height: 305
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,10 +101,10 @@ TextureImporter:
       name: bullit_hit_3
       rect:
         serializedVersion: 2
-        x: 1241
-        y: 8
-        width: 400
-        height: 315
+        x: 1247
+        y: 10
+        width: 392
+        height: 308
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,10 +114,10 @@ TextureImporter:
       name: bullit_hit_4
       rect:
         serializedVersion: 2
-        x: 1651
-        y: 8
-        width: 401
-        height: 315
+        x: 1659
+        y: 10
+        width: 389
+        height: 309
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,10 +127,10 @@ TextureImporter:
       name: bullit_hit_5
       rect:
         serializedVersion: 2
-        x: 2064
-        y: 8
-        width: 399
-        height: 315
+        x: 2068
+        y: 11
+        width: 394
+        height: 307
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
