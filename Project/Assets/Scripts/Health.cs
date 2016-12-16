@@ -6,9 +6,12 @@ using UnityStandardAssets.ImageEffects;
 public class Health : MonoBehaviour {
     private Vector3 _spawnPosition;
     [SerializeField]
-    private GameObject _hitvfx, _deathvfx;
+    private GameObject _deathvfx;
     [SerializeField]
     private bool _canRespawn;
+
+    [SerializeField]
+    private AudioClip _deathSound;
 
     public float health {
         get
@@ -53,7 +56,6 @@ public class Health : MonoBehaviour {
     public void RemoveHealth(float dmg)
     {
         health -= dmg;
-        Instantiate(_hitvfx, transform.position, Quaternion.identity);
         if (health <= 0)
         {
             if(_canRespawn)
@@ -67,6 +69,7 @@ public class Health : MonoBehaviour {
                 gameObject.SetActive(false);
             }
             Instantiate(_deathvfx, transform.position, Quaternion.identity);
+            SoundManager.current.PlaySound(_deathSound);
         }
     }
 
@@ -97,6 +100,7 @@ public class Health : MonoBehaviour {
     void Respawn()
     {
         GetComponent<SpriteRenderer>().enabled = true;
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         transform.position = _spawnPosition;
         if (useAnimationCamera)
         {
