@@ -7,11 +7,11 @@ public class PlayerMovement : MonoBehaviour {
 	private float _playerMovSpeed = 10.0f;
 	[SerializeField]
 	private float _playerJumpForce = 5.0f;
+
     [SerializeField]
     private float _jumpCooldown = 0.2f, _jumpCooldownTime = 0f;
     [SerializeField]
-    private float _raysToShoot = 10f;
-
+	private float _raysToShoot = 10f;
     Rigidbody2D rb;
     BoxCollider2D col;
 	private RaycastHit _hit;
@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour {
                 Jump();
             }
         }
+		if (Input.GetKeyDown (KeyCode.DownArrow)) {
+			JumpDown ();
+		}
+
 
         if (Input.GetAxisRaw ("Horizontal") != 0)
         {
@@ -93,5 +97,11 @@ public class PlayerMovement : MonoBehaviour {
             _jumpCooldownTime = Time.time + _jumpCooldown; 
         }
 	}
+	public void JumpDown(){
+		rb.AddForce (Vector3.down * _playerJumpForce, ForceMode2D.Impulse);
+
+	}
+
+
 
 }
