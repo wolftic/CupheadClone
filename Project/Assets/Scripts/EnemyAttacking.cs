@@ -41,6 +41,9 @@ public class EnemyAttacking : MonoBehaviour
     [SerializeField]
     private float _affectionDistance = 5f;
 
+    [SerializeField]
+    private AudioClip _shootSound;
+
     private float _cooldownTime;
 
     Animator anim;
@@ -101,6 +104,7 @@ public class EnemyAttacking : MonoBehaviour
             bullet.GetComponent<Bullet>().damage = _damage;
             bullet.GetComponent<Bullet>().speed = _bulletSpeed;
             _bullets--;
+            SoundManager.current.PlaySound(_shootSound);
         }
     }
 

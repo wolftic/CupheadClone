@@ -9,7 +9,9 @@ public class Bullet : MonoBehaviour {
     [SerializeField]
     private bool explodeWhenLand = false;
     [SerializeField]
-    private GameObject explosionFX;
+    private GameObject explosionFX, _hitvfx;
+    [SerializeField]
+    private AudioClip _hitSound;
 
     void Start(){
 		Destroy (gameObject, 3f);
@@ -27,6 +29,14 @@ public class Bullet : MonoBehaviour {
             {
                 Health health = coll.transform.GetComponent<Health>();
                 health.RemoveHealth(damage);
+                if(_hitSound)
+                {
+                    SoundManager.current.PlaySound(_hitSound);
+                }
+                if(_hitvfx)
+                {
+                    Instantiate(_hitvfx, transform.position, Quaternion.identity);
+                }
             }
         }
 
